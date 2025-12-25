@@ -1,0 +1,105 @@
+$Yellow: hsl(47, 88%, 63%);
+$Gray: hsl(0, 0%, 42%);
+$Dark-Grey: hsl(0, 0%, 7%);
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Figtree";
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    background: $Yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .card {
+        width: 400px;
+        background: white;
+        border-radius: 20px;
+        padding: 24px;          
+        box-shadow: 8px 8px 0 $Dark-Grey; // solid, hard-edged
+        border: 1px solid #000;
+
+        @media (max-width: 480px) {
+            width: 320px;
+        }
+        
+        #illustration {
+            border-radius: 20px;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .info {
+            span {
+                font-weight: 800;
+                padding: 5px 15px;
+                border-radius: 5px;
+                background-color: $Yellow;
+            }
+
+            h2 {
+                font-weight: 500;
+                margin-top: 20px;
+            }
+
+            h1 {
+                font-weight: 800;
+                font-size: 1.5rem;
+                color: $Dark-Grey;
+                margin-top: 20px;
+
+                &:hover {
+                    color: $Yellow;
+                    cursor: pointer;
+                }
+            }
+
+            p {
+                color: $Gray;
+                margin-block: 15px;
+                line-height: 1.5rem;
+            }
+
+            .profile-component {
+                
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                
+                img {
+                    height: 40px;
+                }
+
+                h3 {
+                    font-weight: 800;
+                    margin-left: 15px;
+                }
+
+            }
+        }
+    }
+
+
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 16px;
+
+  a {
+    text-decoration: underline;
+    color: $Dark-Grey;
+  }
+}
